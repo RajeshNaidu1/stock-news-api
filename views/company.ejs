@@ -1,0 +1,55 @@
+<%- include('partials/header') -%>
+
+<div class="banner">
+    <div>
+        <h1 style="font-size:4rem" style="font-weight:900">Stock Price</h1>
+        <h1 style="font-size:2rem" style="font-weight:900">Scroll Down to more details...</h1>
+    </div>
+</div>
+<div class="companyBox">
+    <div class="companyHead">
+        <h2 class="companyTitle"><%=companyData.comName%></h2>
+        <img src="<%=companyData.imageCom%>">
+        <h1 id="price">Price:<span id="incdec2"> <%=companyData.price%></span></h1>
+    </div>
+
+    <div class="comDetails">
+        <ul>
+            <div class="comDetails-child">
+                <li><p id="incdec">Change: <span style="color:rgb(3, 74, 102)"> <%=companyStockData.change%></span></p></li>
+                <li><p>Opening:<span style="color:rgb(3, 74, 102)"> <%=companyStockData.open%></span></p></li>
+                <li><p>Day Low:<span style="color:rgb(3, 74, 102)"> <%=companyStockData.dayLow%></span></p></li>
+                <li><p>Day High:<span style="color:rgb(3, 74, 102)"> <%=companyStockData.dayHigh%></span></p></li>
+                <li><p>Volume:<span style="color:rgb(3, 74, 102)"> <%=companyStockData.volume%></span></p></li>
+                <li><p>Previous Close:<span style="color:rgb(3, 74, 102)"> <%=companyStockData.prevClose%></span></p></li>
+            </div>
+            <div class="comDetails-child">
+                <li><p>Changes Percentage: <span style="color:rgb(3, 74, 102)"> <%=companyStockData.changesPercentage%></span></p></li>
+                <li><p>Symbol:<span style="color:rgb(3, 74, 102)"> <%=companyData.symbol%></span></p></li>
+                <li><p>ISIN:<span style="color:rgb(3, 74, 102)"> <%=companyData.isin%></span></p></li>
+                <li><p>Phone:<span style="color:rgb(3, 74, 102)"> <%=companyData.phone%></span></p></li>
+                <li><p>Exchange:<span style="color:rgb(3, 74, 102)"> <%=companyData.exchange%></span></p></li>
+            </div>
+        </ul>
+    </div>
+</div>
+<br>
+<br>
+<p class="comDescription"><span><%=companyData.description%></span></p>
+<script>
+    let speech = new SpeechSynthesisUtterance();
+
+    document.querySelector("body").addEventListener("mouseenter", () => {
+        speech.text = "Current "+document.querySelector("#price").innerHTML+"$";
+        window.speechSynthesis.speak(speech);
+    });
+    let arrow
+    let inc_dec=document.getElementById("incdec").innerHTML
+    let inc_dec1=parseFloat(inc_dec)
+    if(inc_dec1<0){
+        document.getElementById("incdec2").style.color="green";
+    }
+    else{
+        document.getElementById("incdec2").style.color="red";
+    }
+</script>

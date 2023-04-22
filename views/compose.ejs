@@ -1,0 +1,12 @@
+<%- include('partials/header'); -%>
+
+
+<form method="post" action="/compose" class="writeBlog">
+    <div class="form-group">
+        <h2>Title</h2>
+        <textarea rows="2" cols="50" type="text" class="form-control" name="BlogTitle"></textarea>
+        <h2>Blog</h2>
+        <textarea rows="10" cols="50" class="form-control" name="BlogBody"></textarea>
+    </div>
+    <button class="btn button-main" id="compose-button" type="submit">Publish</button>
+</form>

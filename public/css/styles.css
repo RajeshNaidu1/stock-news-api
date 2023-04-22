@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    font-family: 'poppins';
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url('../img/bgcover.jpg');
+    
+}
+.logo{
+    height: 40px;
+    width: 40px;
+}
+.logo img{
+    height: 100%;
+    width: 100%;
+
+}
+
+.content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: normal;
+    padding: 1rem 0;
+    background-color: #2d5f858f;
+    color: white;
+    width: 100vw;
+}
+.container{
+    margin: 20px;
+    padding:10px 10px 10px 10px;
+    background-color:white;
+    width:700px;
+    height:300px;
+    border-radius: 20px;
+}
+
+.wholeNews{
+    display:flex;
+    justify-content: center;
+    color:black;
+}
+.newsTitle{
+    display:flex;
+    justify-content: center;
+}
+.newsImage{
+    display:flex;
+    justify-content: space-between;
+}
+.newsContent{
+    width:50%;
+}
+.graph{
+    background-color: yellow;
+}
+.heading{
+    font-size:30px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+.coverpage{
+    background-image: url("../img/banner1.jpg");
+    height: 400px;
+    width: 95vw;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    object-fit: contain;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    padding-left: 50px;
+    font-size: 1.5rem;
+}
+.headLines{
+    display:flex;
+    font-size:40px;
+    color:#4DADF7;
+    /* padding-bottom:30px; */
+    margin-bottom:10px;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    /* position:fixed; */
+}
+#clickhere{
+    color:red;
+}
+.news{
+    text-decoration: none;
+    margin:7px 0;
+}
+.newswrapper{
+    overflow: auto;
+    height:calc(100% - 98px);
+
+}
+a{
+    text-decoration: none;
+    color:black
+}
+.image{
+    height:30px;
+    width:30px;
+    margin-left: 10px;
+}
+div.newsBox {
+    width: 1000px;
+    margin: auto;
+}
+
+.compose{
+    height:40px;
+    background-color: white;
+    border-radius: 20px;
+    color: black;
+    border-color: black;
+}
+body{
+    font-family: 'Poppins', serif;
+    /* background-image: url("https://media.istockphoto.com/vectors/abstract-financial-graph-with-uptrend-line-and-bar-chart-of-stock-on-vector-id1187660847?k=20&m=1187660847&s=170667a&w=0&h=27miB8lDTtZXZj-CX2FGrFIJ6Z8YKitLWVtliQP0bgI="); */
+    /* background-repeat: no-repeat; */
+    background-size: 100%;
+    font-weight: 400;
+    background-color: #DCF7F7;
+}
+.blogSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width:95vw;
+    margin:auto;
+    gap:16px;
+    padding:1rem 0;
+}
+.blog{
+    flex-basis: 40%;
+    margin:auto;
+    background-color: bisque;
+    border-radius: 1rem;
+    padding:1rem;
+}
+.search{
+    display:flex;
+    justify-content:space-between;
+    padding: 0 4rem;
+    align-items: center;
+}
+.top{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:20px;
+    border-radius: 10px;
+}
+
+.banner{
+    background-image: url('../img/banner2.jpeg');
+    opacity: 0.8;
+    height:400px;
+    width:100%;
+    background-size: cover;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    padding-left:50px;
+    justify-content:flex-start;
+    color:white;
+}
+.searchBar{
+    width:200px;
+    height: 40px;
+    border-radius: 20px;
+    border-color: black;
+}
+
+.companyBox{
+    display:flex;
+    justify-content: space-around;
+}
+.companyHead{
+    margin-left: 20px;
+}
+ul {
+    list-style-type: none;
+    color:black;
+}
+.comDetails{
+    background-color: white;
+    border-radius: 20px;
+    padding-right: 15px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    /* opacity: 0.7; */
+}   
+.comDetails ul{
+    padding: 2rem;
+}
+.comDetails li{
+    margin:0.5rem 0;
+}
+.home-buttons{
+    display: flex;
+    gap: 1rem;
+}
+#company{
+    padding:0 1rem;
+}
+.comDetails-child{
+    float:left;
+    width:50%;
+}
+.comDescription{
+    background-color: white;
+    /* opacity: 0.7; */
+    text-align: justify;
+    border-radius: 20px;
+    padding:20px 30px;
+}
+.comDescription span{
+    text-align: justify;
+}
+.writeBlog{
+    width: 100vw;
+    max-width: 500px;
+    margin: auto;
+}
+.button-main{
+    padding: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-color: #4DADF7;
+    border-radius: 1.5rem;
+    border: 1px solid #2d5f85;
+    transition: 0.3s;
+}
+#compose-button{
+    padding: .5rem 1rem;
+}
+.button-main:hover{
+    background-color: #4dadf77c;
+}

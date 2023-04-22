@@ -1,0 +1,42 @@
+<%- include('partials/header') -%>
+<div class="search">
+    <div class="home-buttons"><button class="compose button-main"><a href="/pins">📌My Pins</a></button>
+    <button class="compose button-main"><a href="/compose">✍Write a Blog</a></button></div>
+    <div class="companySearch">
+        <form style="display:flex;align-items:center" method="post" action="/home">
+            <input name="company" id="company" onkeyup="searchCom()" placeholder="Enter a Company's Symbol" class="searchBar" autocomplete="off" type="text">
+            <img onclick=submit() class="image" style="cursor:pointer" style="text-transform: uppercase" src="img/next.png">
+        </form>
+    </div>
+</div>
+<div class="coverpage">
+    <div class="covertext">
+        <h1>Get the Latest News</h1>
+        <h1>Stock Prices </h1>
+        <h1>Read and Write Blogs</h1>
+    </div>
+</div>
+<div class="wholeNews">
+    <div class="container">
+        <h1 class="headLines" id="homeContent"><%=homeContent%></h1>
+        <div class="newswrapper">
+            <% posts.forEach(function2); %>
+            <% function function2(item2) { %>
+                <div class="news">
+                    <p><a href="<%=item2.url%>">📈<%=item2.headLines%> <span id="clickhere">click here</span></a></p>
+                    <!-- <a href="/news/<%=item2.headLines%>">...read more</a></h3> -->
+                </div>
+                <%}%>
+            </div>
+        </div>   
+</div>
+<div class="blogSection">
+    <% blogs.forEach(function(blog){ %>
+        <div class="blog">
+            <h1><%= blog.title %></h1>
+            <p><%= blog.body%></p>
+        </div>
+        <% }) %>
+</div>
+</body>
+</html>
