@@ -13,12 +13,8 @@ let lists=[]
 let blogs=[]
 const homeContent="Head Lines";
 
-app.get('/',(req,res)=>{
-    console.log(req)
-    res.send("hellow world")
-})
 
-app.get("/home",function(req,res){
+app.get("/",function(req,res){
     const userAgent = req.get('user-agent');
     const options = {
     host: 'newsapi.org',
